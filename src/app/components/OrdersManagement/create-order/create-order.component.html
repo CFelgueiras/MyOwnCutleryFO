@@ -1,0 +1,33 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create New Order</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <mat-form-field>
+            <mat-select placeholder="Client Name" [(ngModel)]="order.client_id">
+                <mat-option>(no client selected)</mat-option>
+                <mat-option *ngFor="let cl of clArray.users" [value]="cl._id">{{ cl.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-select placeholder="Product Name" [(ngModel)]="order.id_product">
+                <mat-option>(no product selected)</mat-option>
+                <mat-option *ngFor="let product of prodArray" [value]="product.id">{{ product.name }}</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+        <label>
+            <span>Enter quantity: </span><input class="textbox" type=“text” [(ngModel)]='order.quantity'/>
+        </label><br>
+        <label>
+            <span>Enter delivery date: </span><input class="textbox" type=“text” [(ngModel)]='order.deliveryDateRequested'/>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onAddOrder()">
+        Create New Order
+    </button>
+</div>

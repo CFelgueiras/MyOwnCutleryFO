@@ -1,0 +1,29 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">search</mat-icon>
+            Search Machine</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <mat-form-field>
+            <mat-select placeholder="Machine Identification" [(ngModel)]="machine2.machineId">
+                <mat-option>(no machine selected)</mat-option>
+                <mat-option *ngFor="let mac of macArray" [value]="mac.machineId">{{ mac.identification }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button id="button" (click)="onGetMachineClick()">
+            Machine Information
+        </button>
+        <br>
+        <br>
+        <div><span>Brand: </span>{{machine2.brand}}</div>
+        <div><span>Model: </span>{{machine2.model}}</div>
+        <div><span>Localization: </span>{{machine2.localization}}</div>
+        <div><span>Capacity: </span>{{machine2.capacity}}</div>
+        <div><span>Machine type id: </span>{{machine2.machineTypeId}}
+        </div>
+        <br>
+    </div>
+</div>

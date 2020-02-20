@@ -1,0 +1,26 @@
+<div class="mat-card">
+    <mat-card><h2><b><mat-icon aria-hidden="false">update</mat-icon> Update Client</b></h2></mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter client Id: </span><input class="textbox" type=“text” name=“clientId:” [(ngModel)]='clientUpdate.id'/>
+        </label><br>
+        <!--  Check if the previous data appears on the text box-->
+        <label>
+            <span>Enter client name: </span><input class="textbox" type=“text” name=“clientName:” value="client.name"
+                                            [(ngModel)]='clientUpdate.name'/>
+        </label><br>
+        <label>
+            <span>Enter client email: </span><input class="textbox" type=“text” name=“clientEmail:” value="client.email"
+                                             [(ngModel)]='clientUpdate.email'/>
+        </label><br>
+        <label>
+            <span>Enter client address: </span><input class="textbox" type=“text” name=“clientAddress:” value="client.address"
+                                               [(ngModel)]='clientUpdate.address'/>
+        </label><br>
+    </div>
+    <button id="button" (click)="onUpdateClient()">
+        Update Client
+    </button>
+</div>
+<br><br><br>

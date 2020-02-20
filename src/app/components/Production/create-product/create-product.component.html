@@ -1,0 +1,28 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create New Product</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span id="ident">Enter product name: </span><input class="textbox" id="productname" type=“text”
+                                                               name=“productName:”
+                                                               [(ngModel)]='product.Name'/><br>
+        </label>
+        <label>
+            <span>Enter manufacturing plan Id: </span><br>
+            <mat-form-field>
+                <mat-select [(ngModel)]="product.ManPlanId" placeholder="Manufacturing Plan Name">
+                    <mat-option>(no manufacturing plan selected)</mat-option>
+                    <mat-option *ngFor="let manPlan of manPlanArray" [value]="manPlan.id">{{ manPlan.name.name }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onAddProduct()">
+        Add New Product
+    </button>
+</div>

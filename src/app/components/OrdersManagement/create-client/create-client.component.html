@@ -1,0 +1,59 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+                <mat-icon aria-hidden="false">how_to_reg</mat-icon>
+                Create New Client
+            </b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span id="name">Enter client name: </span><input class="textbox" type=“text” name=“clientFirstName:”
+                [(ngModel)]='client2.name' /><br>
+        </label>
+        <label>
+            <span>Enter client email: </span><input class="textbox" type=“text” name=“clientLastName:”
+                [(ngModel)]='client2.email' /><br>
+        </label>
+        <label>
+            <span>Enter client address: </span><input class="textbox" type=“text” name=“clientAddress:”
+                [(ngModel)]='client2.address' /><br>
+        </label>
+        <label>Password:
+            <input class="textbox" type="password" placeholder=" Enter Password" name="psw" required
+                [(ngModel)]='client2.password'></label><br>
+        <label>Password:
+            <input class="textbox" type="password" placeholder=" Retype Password" name="psw2" required
+                [(ngModel)]='dataCheck.password2'></label>
+        <h5>
+            <div class="checkbox">
+                <label>
+                    <input #client [(ngModel)]="dataCheck.agree" type="checkbox" data-toggle="toggle">
+
+                    I declare that the aforementioned data are authentic, owned by me and/or I am authorized to transmit
+                    it, and I acknowledge that misrepresentation and/or unauthorized disclosure of third party data may
+                    result in legal consequences. I also acknowledge that I have the right to rectify, access, forget
+                    and portability of the data provided, as well as to oppose and limit their processing.
+                    <br>
+                    I declare that I have read and understood the data privacy policy that is available on the site.
+                    (RGPD).
+                    <br><br>
+                    Portuguese:
+                    Declaro que os
+                    dados acima mencionados são autênticos, da minha titularidade e \ ou estou autorizado a transmitir
+                    os mesmos, e reconheço que falsas declarações e \ ou divulgação não autorizada de dados de terceiros
+                    poderá advir de consequências legais.
+                    Tomei igualmente conhecimento, que tenho o direito de retificação, acesso, esquecimento e
+                    portabilidade dos dados facultados, assim como à oposição e limitação do seu tratamento.<br>
+                    Declaro que li e compreendi a política de privacidade de dados que se encontra disponível no site
+                    (RGPD).
+                </label>
+            </div>
+            <br>
+        </h5>
+    </div>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button id="button" (click)="onAddClient()">
+        Register New Client
+    </button>
+</div>

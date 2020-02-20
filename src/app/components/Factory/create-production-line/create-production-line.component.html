@@ -1,0 +1,24 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create Production Line</b></h2>
+    </mat-card>
+    <br>
+    <h2>Create production line:</h2>
+    <div>
+        <label>
+            <span>Enter production line name: </span><input class="textbox" type=“text” name=“productionLineName:”
+                                                            [(ngModel)]='productionLine.Name'/><br>
+        </label>
+        <label>
+            <span>Enter machine Id: </span><input class="textbox" type=“number” name=“machineId” [(ngModel)]='machineId'/>
+            <button id="button2" (click)="addMachineToProdLine()"> <mat-icon aria-hidden="false">add_to_photos</mat-icon> Add Machine</button>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onAddProductionLine()">
+        Add production line
+    </button>
+</div>
+<br><br><br>

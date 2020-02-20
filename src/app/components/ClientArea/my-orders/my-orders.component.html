@@ -1,0 +1,29 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">search</mat-icon>
+            My orders</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <mat-form-field>
+            <mat-select placeholder="Client Name" [(ngModel)]="clObj._id">
+                <mat-option>(no client selected)</mat-option>
+                <mat-option *ngFor="let cl of clArray.users" [value]="cl._id">{{ cl.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button id="button" (click)="onGetOrderClick()">
+            Order information:
+        </button>
+        <br>
+        <ul *ngFor="let ord of oArray.orders">
+            <div *ngIf="ord.client_id == clObj._id">
+                <span>Product Id: </span>{{ord.id_product}}<br>
+                <span>Quantity: </span>{{ord.quantity}}<br>
+                <span>Delivery date requested: </span>{{ord.deliveryDateRequested}}<br>
+
+            </div>
+        </ul>
+    </div>
+</div>

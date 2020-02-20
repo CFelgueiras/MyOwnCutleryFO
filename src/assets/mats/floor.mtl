@@ -1,0 +1,11 @@
+# Blender3D MTL File: SA_LD_Generator.blend
+# Material Count: 0
+newmtl wire_115115115
+illum 4
+Kd 1.00 1.00 1.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd floor.jpg
+Ni 1.50
+Ks 1.00 1.00 1.00
+Ns 1.00

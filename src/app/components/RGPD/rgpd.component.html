@@ -1,0 +1,129 @@
+<style>
+    table, th, td {
+        border: 3px solid grey;
+        border-collapse: collapse;
+        padding: 10px;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+</style>
+
+<h3>MyOwnCutlery – Regulamento Geral Sobre a Proteção de Dados 	<mat-icon>security</mat-icon></h3>
+
+<mat-accordion>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Responsável do tratamento de dados pessoais?</b>
+            </mat-panel-title>
+<!--            <mat-panel-description>
+                {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>-->
+        </mat-expansion-panel-header>
+        <p>A MyOwnCutlery, com sede na R. Dr. António Bernardino de Almeida 431, 4200-072 Porto, NIF 500 123 456, com
+            contacto tlf:221 234 567, é nos termos do Regulamento Geral sobre a Proteção de Dados a responsável pelo
+            tratamento dos dados pessoais que recolhemos através do seu registo e navegação neste website.
+        </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Quais os dados pessoais e serem recolhidos?</b>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>No momento de registo no nosso website, recolheremos obrigatoriamente o seu nome, morada e email.
+            Os dados pessoais fornecidos durante o registo, não constituem uma obrigação legal ou contratual com a
+            MyOwnCutlery, pelo que se não fornecer os dados obrigatórios, a consequência poderá ser a impossibilidade de
+            lhe darmos uma resposta.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Qual a finalidade do uso dos dados pessoais?</b>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Os dados recolhidos, stem como objetivo a comunicação em resposta às solicitações que nos sejam apresentadas
+            por si. Tratamos os dados pessoais, que por si sejam fornecidos através do nosso website, com fundamento na
+            anuência que nos presta aquando do registo e submissão do seu pedido.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Finalidade de tratamento (listagem exemplificativa, não exaustiva):</b>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Gestão de Contabilidade, fiscal e Administrativa - Gestão administrativa, económica, contabilística e gestão
+            de clientes
+            Atividade Comercial \ Marketing - Gestão de clientes no fornecimento de produtos, apoio a clientes,
+            marketing e publicidade e fidelização de clientes
+            Tendo por base o artigo n.º 6 do RGPD, a MyOwnCutlery só trata os seus Dados Pessoais, na existência de um
+            fundamento de licitude que legitime esse mesmo tratamento, nomeadamente:</p>
+        <table style="width:100%">
+            <tr>
+                <th>Fundamentos de Licitude</th>
+                <th>Em que é que estes consistem?</th>
+            </tr>
+            <tr>
+                <td>Consentimento</td>
+                <td>A MyOwnCutlery só procederá a tratamento dos seus Dados Pessoais, se consentir no seu tratamento,
+                    mediante
+                    uma manifestação de livre vontade, informada e explícita, pela qual aceita, mediante declaração (por
+                    escrito) ou ato positivo inequívoco (através do preenchimento de uma opção), que os seus Dados
+                    Pessoais
+                    sejam objeto de tratamento.
+                </td>
+            </tr>
+            <tr>
+                <td>Interesses Legítimos</td>
+                <td>A MyOwnCutlery, poderá tratar os seus Dados Pessoais desde que esse tratamento, não prevaleça sobre
+                    os seus
+                    interesses ou direitos e liberdades fundamentais.
+                </td>
+            </tr>
+        </table>
+    </mat-expansion-panel>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Durante quanto tempo é que os seus dados são conservados?</b>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Os seus dados pessoais serão conservados, apenas durante o período estritamente necessário para o envio de
+            resposta e cumprimento das obrigações legais.
+            Findo o prazo de retenção, todos os seus dados pessoais serão eliminados ou anonimizados de forma
+            segura.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (closed)="panelOpenState = false"
+                         (opened)="panelOpenState = true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Quais os seus direitos e como é que os pode exercer?</b>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <span>Tal como previsto na legislação vigente, tem o direito de nos solicitar:</span><br><br>
+          <span>· Informação adicional sobre a utilização aos seus dados pessoais;</span><br>
+          <span>· O acesso aos seus dados pessoais;</span><br>
+          <span>· Retificação ou alteração dos seus dados pessoais;</span><br>
+          <span>· A eliminação dos seus dados pessoais;</span><br>
+          <span>· A cessação do tratamento dos seus dados pessoais em caso de oposição;</span><br>
+          <span>· A limitação do tratamento dos seus dados pessoais;</span><br>
+          <span>· Tem ainda direito a retirar o consentimento em qualquer altura, sem comprometer a licitude do tratamento efetuado com base no consentimento previamente dado.</span>
+          <br>
+          <br>
+          <span>Em caso de dúvidas sobre a utilização dos dados recolhidos ou na necessidade para exercer os seus direitos, deverá contactar-nos através dos meios de contacto disponibilizados nesta página.</span>
+    </mat-expansion-panel>
+</mat-accordion>
+<h6>
+    <span><b></b>MyOwnCutlery</span><br>
+    <span>R. Dr. António Bernardino de Almeida 431, 4200-072 Porto - Telefone 221 234 567 - NIF 500 123 456</span></h6>

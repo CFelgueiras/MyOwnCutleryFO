@@ -1,0 +1,101 @@
+<a>
+    <h1 id="title" class="scale-up-center"><a href="/">{{title}}</a></h1>
+    <mat-toolbar-row>
+        <h2 class="slide-right"><b>MyOwnCutlery - a management website that helps you to manage your company</b></h2>
+    </mat-toolbar-row>
+    <br>
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" *ngIf='isLogged' [matMenuTriggerFor]="clientArea">Client Area</button>
+        <button mat-raised-button color="primary" *ngIf='isLogged' [matMenuTriggerFor]="factory">Factory</button>
+        <button mat-raised-button color="primary" *ngIf='isLogged' [matMenuTriggerFor]="production">Production</button>
+        <button mat-raised-button color="primary" *ngIf='isLogged' [matMenuTriggerFor]="ordersManagement">
+            OrdersManagement
+        </button>
+        <button mat-raised-button color="primary"  *ngIf='isLogged' routerLink="MyOwnCutlery3D" routerLinkActive="active">MyOwnCutlery3D
+        </button>
+        <button mat-raised-button color="primary" routerLink="RGPD" routerLinkActive="active">RGPD</button>
+        <button mat-raised-button color="primary" routerLink="About" routerLinkActive="active">About Us</button>
+        <button mat-raised-button color="primary" *ngIf='isLogged' (click)="logout()" class="btn btn-primary"> Logout
+        </button>
+    </div>
+
+    <mat-menu #clientArea="matMenu">
+        <button mat-menu-item routerLink="ClientArea" routerLinkActive="active">My Orders</button>
+        <button mat-menu-item [matMenuTriggerFor]="searchProducts">Search Products</button>
+    </mat-menu>
+
+    <mat-menu #factory="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="machines">Machines</button>
+        <button mat-menu-item [matMenuTriggerFor]="prodLine">Production Line</button>
+        <button mat-menu-item [matMenuTriggerFor]="operations">Operations</button>
+    </mat-menu>
+
+    <mat-menu #production="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="products">Products</button>
+    </mat-menu>
+
+    <mat-menu #ordersManagement="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="clients">Clients</button>
+        <button mat-menu-item [matMenuTriggerFor]="orders">Orders</button>
+    </mat-menu>
+
+    <mat-menu #machines="matMenu">
+    <button mat-menu-item routerLink="Machine" routerLinkActive="active">Add New Machine</button>
+    <button mat-menu-item routerLink="MachineSearch" routerLinkActive="active">Search Machine</button>
+    <button mat-menu-item routerLink="MachineTypeSearch" routerLinkActive="active">Search Machines By Type</button>
+    <button mat-menu-item routerLink="MachineType" routerLinkActive="active">Add Machine Type</button>
+    <button mat-menu-item routerLink="MachineTypeUpdate" routerLinkActive="active">Update Machine Type</button>
+    <button mat-menu-item routerLink="MachineStateUpdate" routerLinkActive="active">Update Machine State</button>
+</mat-menu>
+
+    <mat-menu #searchProducts="matMenu">
+        <button mat-menu-item routerLink="ProductMode" routerLinkActive="active">Most Requested</button>
+        <button mat-menu-item routerLink="ProductBestSellers" routerLinkActive="active">Best Sellers</button>
+        <button mat-menu-item routerLink="ProductLessTimeProduction" routerLinkActive="active">Fastest to be executed</button>
+    </mat-menu>
+
+    <mat-menu #prodLine="matMenu">
+        <button mat-menu-item routerLink="ProductionLine" routerLinkActive="active">Add Production Line</button>
+    </mat-menu>
+
+    <mat-menu #products="matMenu">
+        <button mat-menu-item routerLink="Product" routerLinkActive="active">Add New Product</button>
+        <button mat-menu-item routerLink="ProductSearch" routerLinkActive="active">Search Product</button>
+        <button mat-menu-item routerLink="ManPlanSearch" routerLinkActive="active">Search Manufacturing Plan</button>
+    </mat-menu>
+
+    <mat-menu #operations="matMenu">
+        <button mat-menu-item routerLink="Operation" routerLinkActive="active">Add Operation</button>
+        <button mat-menu-item routerLink="OperationsMachType" routerLinkActive="active">Search Operations by Machine
+            Type
+        </button>
+        <button mat-menu-item routerLink="OperationUpdate" routerLinkActive="active">Update Machine Type Operations
+        </button>
+    </mat-menu>
+
+    <mat-menu #clients="matMenu">
+        <button mat-menu-item routerLink="CreateClient" routerLinkActive="active">Add New Client</button>
+        <button mat-menu-item routerLink="ClientSearch" routerLinkActive="active">Search Client</button>
+        <button mat-menu-item routerLink="ClientUpdate" routerLinkActive="active">Update Client</button>
+    </mat-menu>
+
+    <mat-menu #orders="matMenu">
+        <button mat-menu-item routerLink="CreateOrder" routerLinkActive="active">Create New Order</button>
+        <button mat-menu-item routerLink="OrderSearch" routerLinkActive="active">Search Order</button>
+        <button mat-menu-item routerLink="OrderUpdate" routerLinkActive="active">Update Order</button>
+        <button mat-menu-item routerLink="OrderDelete" routerLinkActive="active">Delete Order</button>
+    </mat-menu>
+</a>
+<div>
+    <router-outlet></router-outlet>
+</div>
+<br>
+<div id = "background" class="container">
+    <img src="https://img.grouponcdn.com/deal/47epGtgvScRUEKiUqSE8KuMSXbCn/47-1772x1063/v1/c700x420.jpg" alt="Snow"
+         style="width:100%;">
+    <div class="bottom-left"></div>
+    <div class="top-left"></div>
+    <div class="top-right"></div>
+    <div class="bottom-right"></div>
+    <div class="centered"></div>
+</div>

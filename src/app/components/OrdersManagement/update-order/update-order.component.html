@@ -1,0 +1,27 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">update</mat-icon>
+            Update Order</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter Order id: </span><input class="textbox" type=“text” name=“orderId:” [(ngModel)]='orderUpdate.id'/><br>
+        </label>
+        <label>
+            <span>Product Name: </span><input class="textbox" type=“text” name=“productName:” [(ngModel)]='orderUpdate.id_product'/><br>
+        </label>
+        <label>
+            <span>Product Quantity: </span><input class="textbox" type=“text” name=“productQuantity:”
+                                                  [(ngModel)]='orderUpdate.quantity'/>
+        </label>
+        <label><br>
+            <span>Product Delivery Date: </span><input class="textbox" type=“text” name=“orderDeliveryDate:”
+                                                       [(ngModel)]='orderUpdate.deliveryDate'/>
+        </label><br>
+    </div>
+    <button id="button" (click)="onUpdateOrder()">
+        Update Order
+    </button>
+</div>

@@ -1,0 +1,20 @@
+<div class="mat-card">
+    <mat-card><h2><b><mat-icon aria-hidden="false" aria-label="search-icon">search</mat-icon> Search Client</b></h2></mat-card>
+    <br>
+    <div>
+        <mat-form-field>
+            <mat-select placeholder="Client Name" [(ngModel)]="clObj._id">
+                <mat-option>(no client selected)</mat-option>
+                <mat-option *ngFor="let cl of clArray.users" [value]="cl._id">{{ cl.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <div><span>Email: </span>{{client?.user.email}}</div>
+        <br>
+        <div><span>Address: </span>{{client?.user.address}}</div>
+        <br>
+        <button id="clickGetClient" (click)="onGetClientClick()">
+            Search Client
+        </button>
+    </div>
+</div>

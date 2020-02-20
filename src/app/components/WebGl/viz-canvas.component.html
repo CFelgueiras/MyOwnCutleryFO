@@ -1,0 +1,97 @@
+<div class="mat-card">
+    <html>
+
+    <head>
+        <script src='/src/assets/js/main.js' type="text/javascript"></script>
+    </head>
+    <!--<style>
+        .button {
+            background-color: #3F51B5;
+            border: none;
+            color: white;
+            padding: 12px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>-->
+
+    <body>
+    <canvas id="webgl">Please use a browser that supports "canvas"</canvas>
+    <p id="status"></p>
+    <div id="tooltip">tooltip</div>
+    <button id="button" (click)="onClickOpenForm()" class="button" type="button" value="Create Machine">Create Machine
+    </button><br>
+    <div [hidden]="!openform">
+        <form (ngSubmit)="onClickSubmitForm()">
+            <label>
+                <span>Identification: </span><br>
+                <input class="textbox" [(ngModel)]='Identification' class="form-control" name="identification"
+                       type="text">
+            </label>
+            <br>
+            <label>
+                <span>Brand:</span><br>
+                <input [(ngModel)]='Brand' class="form-control" name="brand" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Model:</span><br>
+                <input [(ngModel)]='Model' class="form-control" name="model" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Production Line: </span><br>
+                <input [(ngModel)]='pl' class="form-control" name="pl" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Coordenate X:</span><br>
+                <input [(ngModel)]='x' class="form-control" name="x" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Coordenate Y:</span><br>
+                <input [(ngModel)]='y' class="form-control" name="y" type="text">
+            </label>
+            <br>
+            <label>
+                <span> Coordenate Z:</span><br>
+                <input [(ngModel)]='z' class="form-control" name="z" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Coordenate Rotation X:</span><br>
+                <input [(ngModel)]='rtx' class="form-control" name="rtx" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Capacity:</span><br>
+                <input [(ngModel)]='Capacity' class="form-control" name="capacity" type="text">
+            </label>
+            <br>
+            <label>
+                <span>State:</span><br>
+                <input [(ngModel)]='State' class="form-control" name="state" type="text">
+            </label>
+            <br>
+            <label>
+                <span>MachineType:</span><br>
+                <input [(ngModel)]='MachineTypeId' class="form-control" name="machineType" type="text">
+            </label>
+            <br>
+            <label>
+                <span>Production Line Id:</span><br>
+                <input [(ngModel)]='ProductionLineId' class="form-control" name="productionLineId" type="text">
+            </label>
+            <br><br>
+            <button id="button2" class="forsubmit" type="submit"> Submit</button>
+        </form>
+    </div>
+    </body>
+    </html>
+</div>

@@ -1,0 +1,36 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">search</mat-icon>
+            Search Manufacturing Plan
+        </b></h2>
+    </mat-card>
+    <br>
+    <div>
+       <mat-form-field>
+            <mat-select [(ngModel)]="manPlanObj.id" placeholder="Manufacturing Plan Name">
+                <mat-option>(no manufacturing plan selected)</mat-option>
+                <mat-option *ngFor="let manPlan of manPlanArray" [value]="manPlan.id">{{ manPlan.name.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <div>
+            <button (click)="onGetManPlanClick()" id="button">
+                Search Manufacturing Plan
+            </button>
+        </div>
+        <br>
+        <div>
+            <ul *ngFor="let operation of operArray">
+                <li>
+                    <span>Operation Id: </span>{{operation.operationId}}<br>
+                    <span>Operation Name: </span>{{operation.name}}<br>
+                    <span>Tool Name: </span>{{operation.toolName}}<br>
+                    <span>Operation Name: </span>{{operation.operationName}}<br>
+                    <span>Operation time: </span>{{operation.operationTime}}<br>
+                    <span>Preparation time: </span>{{operation.preparationTime}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

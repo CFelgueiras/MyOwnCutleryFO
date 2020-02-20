@@ -1,0 +1,28 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">update</mat-icon>
+            Update Machine Type</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Machine Identification" [(ngModel)]="machineUpdate.machineId">
+                    <mat-option>(no machine selected)</mat-option>
+                    <mat-option *ngFor="let mac of macArray" [value]="mac.machineId">{{ mac.identification }}</mat-option>
+                </mat-select>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-select placeholder="Machine Type Name" [(ngModel)]="machType.machineTypeId">
+                    <mat-option>(no machine type selected)</mat-option>
+                    <mat-option *ngFor="let mt of machTypeArray" [value]="mt.machineTypeId">{{ mt.name.name }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <br>
+        <button id="button" (click)="onUpdateMachineType()">
+            Update Machine Type
+        </button>
+    </div>
+</div>

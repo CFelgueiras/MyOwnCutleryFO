@@ -1,0 +1,17 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">delete</mat-icon>
+            Delete Order</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter order Id: </span><input class="textbox" type=“text” name=“orderId:” [(ngModel)]='orderDelete.id'/>
+        </label><br>
+    </div>
+    <br>
+    <button id="button" (click)="onDeleteOrder()">
+        Delete Order
+    </button>
+</div>

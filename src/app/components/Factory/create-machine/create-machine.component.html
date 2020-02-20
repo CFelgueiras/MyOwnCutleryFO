@@ -1,0 +1,47 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create New Machine</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span id="ident">Enter machine identification: </span><input class="textbox" id="machineident" type=“text”
+                                                                         name=“machineIdentification:”
+                                                                         [(ngModel)]='machine.Identification'/><br>
+        </label>
+        <label>
+            <span>Enter machine brand: </span><input class="textbox" type=“text” name=“machineBrand:”
+                                                     [(ngModel)]='machine.Brand'/><br>
+        </label>
+        <label>
+            <span>Enter machine model: </span><input class="textbox" type=“text” name=“machineModel:”
+                                                     [(ngModel)]='machine.Model'/><br>
+        </label>
+        <label>
+            <span>Enter machine localization: </span><input class="textbox" type=“text” name=“machineLocalization:”
+                                                            [(ngModel)]='machine.Localization'/><br>
+        </label>
+        <label>
+            <span>Enter machine capacity: </span><input class="textbox" type=“text” name=“machineCapacity:”
+                                                        [(ngModel)]='machine.Capacity'/>
+        </label><br>
+        <span>Enter machine type: </span><br>
+        <mat-form-field>
+            <mat-select placeholder="Machine Type Name" [(ngModel)]="machine.MachineTypeId">
+                <mat-option>(no machine type selected)</mat-option>
+                <mat-option *ngFor="let mt of machTypeArray" [value]="mt.machineTypeId">{{ mt.name.name }}</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+        <label>
+            <span>Enable/ Disable machine:<input class="textbox" #client type="checkbox" data-toggle="toggle"
+                                                         [(ngModel)]='machine.State'/>
+            Machine state: {{machine.State}} </span>
+        </label>
+    </div><br>
+    <button id="button" (click)="onAddMachine()">
+        Add Machine
+    </button>
+    <br><br>
+</div>

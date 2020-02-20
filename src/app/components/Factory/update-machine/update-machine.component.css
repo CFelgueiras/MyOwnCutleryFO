@@ -1,0 +1,21 @@
+#button {
+    color : rgb(49, 46, 46);
+    background-color: rgba(0, 0, 255, 0.3);
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+}
+
+.mat-card card,
+.mat-card a {
+    margin-right: 3px;
+}
+
+h2 {
+    color: #4682B4;
+    font-family: sans-serif;
+}
+
+.textbox {
+    display: block;
+    margin-left: 1px;
+}

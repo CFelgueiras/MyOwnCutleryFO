@@ -1,0 +1,23 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create Machine Type</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter machine type name: </span><input class="textbox" type=“text” name=“machineTypeName:”
+                                                         [(ngModel)]='machineType.Name'/><br>
+        </label>
+        <label>
+            <span>Enter operation Id: </span><input class="textbox" type=“text” name=“operationId:” [(ngModel)]='operationId'/>
+            <button id="button2" (click)="addOperationToMachine()"> <mat-icon aria-hidden="false">add_to_photos</mat-icon>  Add Operation</button>
+            <br>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onAddMachineType()">
+        Add Machine Type
+    </button>
+</div>

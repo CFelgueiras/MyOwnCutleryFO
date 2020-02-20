@@ -1,0 +1,24 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">search</mat-icon>
+            Show Most Requested Products:</b></h2>
+    </mat-card>
+<!--    <button id="button" (click)="getProds()">
+        Show Best Seller (Top 3)):
+    </button>-->
+    <span><h5>TOP 3</h5></span>
+    <div>
+        <div *ngFor="let x of prodIdArray.products">
+            <div *ngFor="let product of prodArray">
+                <div *ngIf="x == product.id ">
+                    <li>
+                        <span>Product Id: </span>{{product.id}}<br>
+                        <span>Product Name: </span>{{product.name}}<br>
+                    </li>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">update</mat-icon>
+            Update Machine Type Operation</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter operation id: </span><input class="textbox" type=“text” name=“machineId:”
+                                                    [(ngModel)]='machineTypeOperation.OperationId'/><br>
+        </label>
+        <label>
+            <span>Enter the new machine type Id: </span><input class="textbox" type=“text” name=“machineTypeId:”
+                                                               [(ngModel)]='machineTypeOperation.MachineTypeId'/>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onUpdateMachineType()">
+        Update machine type
+    </button>
+</div>

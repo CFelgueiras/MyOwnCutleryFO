@@ -1,0 +1,25 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">update</mat-icon>
+            Update Machine State</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <span>Enter machine identification: </span><br>
+        <mat-form-field>
+            <mat-select placeholder="Machine Identification" [(ngModel)]="machine2.machineId">
+                <mat-option>(no machine selected)</mat-option>
+                <mat-option *ngFor="let mac of macArray" [value]="mac.machineId">{{ mac.identification }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <label>Enable/ Disable machine:<input class="textbox" #client type="checkbox"
+                                                                 data-toggle="toggle"
+                                                                 [(ngModel)]='machine2.State'/> Machine state: {{machine2.State}}</label>
+        <br>
+        <button id="button" (click)="onUpdateMachineState()">
+            Update Machine State
+        </button>
+    </div>
+</div>

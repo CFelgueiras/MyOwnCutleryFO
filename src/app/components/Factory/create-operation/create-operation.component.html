@@ -1,0 +1,29 @@
+<div class="mat-card">
+    <mat-card>
+        <h2><b>
+            <mat-icon aria-hidden="false">create</mat-icon>
+            Create Operation</b></h2>
+    </mat-card>
+    <br>
+    <div>
+        <label>
+            <span>Enter operation Name: </span><input class="textbox" type=“text” name=“operationName:”
+                                                      [(ngModel)]='operation.Name'/><br>
+        </label>
+        <label>
+            <span>Enter tool Name: </span><input class="textbox" type=“text” name=“toolName:” [(ngModel)]='operation.ToolName'/><br>
+        </label>
+        <label>
+            <span>Enter operation time: </span><input class="textbox" type=“text” name=“operationTime:”
+                                                      [(ngModel)]='operation.OperationTime'/><br>
+        </label>
+        <label>
+            <span>Enter preparation time: </span><input class="textbox" type=“text” name=“preparationTime:”
+                                                        [(ngModel)]='operation.PreparationTime'/>
+        </label>
+    </div>
+    <br>
+    <button id="button" (click)="onAddOperation()">
+        Add Operation
+    </button>
+</div>
